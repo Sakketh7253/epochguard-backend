@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: epochguard-backend
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ENVIRONMENT
+        value: production
